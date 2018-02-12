@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 12px;
+  color: #575757;
+  background-color: #F5F5F5 !important;
+}
+
+.navbar {
+  background-color: #FFF;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.card {
+  margin-bottom: 15px;
+}
+
+.card-header{
+  background-color: #FFF !important;
+  border-bottom: 0 !important;
+  color: #333;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: left;
+}
+
+.card-block {
+  padding: 10px;
+}
+
+.card-plain {
+  background-color: transparent!important;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    border: 0!important;
+}
+
+.card-plain .card-header{
+  background-color: transparent!important;
+  border: 0!important;
+  box-shadow: none!important;
+  -webkit-box-shadow: none!important;
+}
+
+.blueCell {
+  background-color: #1177C6;
+  border: 1px solid #FFF;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 12px;
+  height: 50px;
+  width: 50px;
+}
+
+.redCell {
+  background-color: #AC162C;
+  border: 1px solid #FFF;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 12px;
+  height: 50px;
+  width: 50px;
+}
+
+.whiteCell {
+  background-color: #FFFFFF;
+  border: 1px solid #FFF;
+  color: #575757;
+  cursor: pointer;
+  font-size: 12px;
+  height: 50px;
+  width: 50px;
+}
+
+.grayCell {
+  background-color: #9A9A9A;
+  border: 1px solid #FFF;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 12px;
+  height: 50px;
+  width: 50px;
+}
+
+.col-xs-1-10, .col-sm-1-10 {
+  min-height: 36px;
+  position: relative;
+}
+
+.col-xs-1-10 {
+  float: left;
+  min-height: 36px;
+  width: 10%;
+}
+
+.col-xs-10-10, .col-sm-10-10 {
+  min-height: 36px;
+  position: relative;
+  width: 100%;
+}
+
+.col-xs-10-10 {
+  float: left;
+  min-height: 36px;
+  width: 100%;
+}
+
+.row {
+  margin: 0 !important;
+}
+
+.gameRoomButton {
+  background-color: #FFF;
+  border-radius: .25rem;
+  box-shadow: none;
+    color: #333;
+  cursor: pointer;
+  font-size: 22px;
+  height: 150px;
+  margin: 10px;
+  width: 100%;
+}
+
+.playerMessageSpan{
+    color: #333;
+  font-size: 14px;
+}
+
+.messageCard, .sunkenShipsCard{
+  color: #333;
+  font-size: 22px;
+  font-weight: 300;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+
+}
+
+.messageCardText, .sunkenShipList{
+color: #333;
+font-size: 14px;
+  font-weight: 400;
+}
+
+.sunkenShip {
+  color: #D9453D
+}
+
+.floatingShip {
+  color: #4688F1
+}
+
+.circle {
+  background: blue;
+  border-radius: 50%;
+  color: #FFF;
+  font-size: .5rem;
+  height: 36px;
+  line-height: 36px;
+  margin: 0 auto;
+  min-height: 36px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  width: 36px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.screen {
+  background-color: #082B0C;
+}
+
+button:focus {
+  outline: 0 !important;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+@media (min-width: 768px) {
+  .col-sm-1-10 {
+    float: left;
+    min-height: 36px;
+    width: 10%;
+  }
+  .col-sm-10-10 {
+    float: left;
+    min-height: 36px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-md-1-10 {
+    float: left;
+    min-height: 36px;
+    width: 10%;
+  }
+  .col-md-10-10 {
+    float: left;
+    min-height: 36px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-lg-1-10 {
+    float: left;
+    min-height: 36px;
+    width: 10%;
+  }
+  .col-lg-2-10 {
+    float: left;
+    min-height: 36px;
+    width: 20%;
+  }
+}
