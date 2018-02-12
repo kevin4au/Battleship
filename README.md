@@ -39,4 +39,4 @@ the code is edited in the src folder.  By running "npm run watch", webpack will 
 * Make the number of game rooms dynamic.  For simplicity, they have been limited to 5.
 * Add a sign in screen to make players unique.  Currently, I assign players a unique ID using the timestamp of when they started the game.  Gravatars could be used.  A chat window could also be created to make for a better player to player interface.
 * Refactor the receiveMessage() method in the *Player* class.  This one grew a lot, and I think it could be broken into separate methods for better readabilty.
-* Make additional UI enhancements.
+* Make additional UI enhancements to make the game more intuitive, exciting, and user friendly.
