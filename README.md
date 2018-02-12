@@ -37,6 +37,6 @@ the code is edited in the src folder.  By running "npm run watch", webpack will 
 * Return players to the game lobby after a game is complete or if they click the brand in the top left.
   This would require the view to be reset and for a notification message to be sent to other clients.
 * Make the number of game rooms dynamic.  For simplicity, they have been limited to 5.
-* Add a sign in screen to make players unique.  Gravatars could be used.  A chat window could also be created to make for a better player to player interface.
+* Add a sign in screen to make players unique.  Currently, I assign players a unique ID using the timestamp of when they start the game.  Gravatars could be used.  A chat window could also be created to make for a better player to player interface.
 * Refactor the receiveMessage() method in the *Player* class.  This one grew a lot, and I think it could be broken into separate methods for better readabilty.
 * Make additional UI enhancements.
