@@ -2,4 +2,4 @@
 This is a Battleship Game written using Node.js and React.
 
 
-**Demo:** [battleship.kevinboyd.me](http://www.battleship.kevinboyd.me)
+**Demo:** [battleship.kevinboyd.me](http://battleship.kevinboyd.me)
