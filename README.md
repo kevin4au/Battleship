@@ -18,7 +18,7 @@ Logs may be seen by opening up dev tools in the browser.  (Most testing has take
 This program was build using Node.js and React.  It is comprised of a number of files that make up both the client and server.
 
 ### Server:
-Most of the server logic takes place in index.js in the root directory.
+Most of the server logic takes place in index.js in the root directory.  extract.js will assist this file in routing.
 This file handles both the serving of files and the handling of websockets.  
 A second file exists to resolve the paths used by the site.  We will only use one: index.html.  
 When editing files, it is useful to run "npm run dev" in a terminal window to automatically restart the server when files are saved.
