@@ -35,7 +35,7 @@ export default view;
 socket.init();
 
 //render the site
-ReactDOM.render( < GameWrapper / > ,
+ReactDOM.render( <GameWrapper /> ,
   document.getElementById('root')
 );
 

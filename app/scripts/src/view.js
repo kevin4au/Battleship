@@ -25,9 +25,9 @@ export class GameWrapper extends React.Component {
     //map out the varying colors for the grid cells
     this.bgColors = {
       "Blue": "blueCell",
-      "Red": "redCell",
+      "Red": "redCell highlight",
       "Gray": "grayCell",
-      "White": 'whiteCell'
+      "White": "whiteCell highlight"
     };
 
     //initialize opponent grid to empty
@@ -132,7 +132,7 @@ export class GameWrapper extends React.Component {
 
   //show the topmost component and contained elements
   render() {
-    return ( <div>
+    return ( <div  className="gameWrapper">
       <Header/>
       <WelcomeDiv removeWelcomeCallback={this.removeWelcomeDiv} roomCounts={this.state.roomCounts} style={{display: this.state.displayWelcomeDiv}}/>
       <Body style={{display: this.state.displayBody}} messageBox={this.state.messageBox} opponentStateGrid={this.state.opponentStateGrid} myStateGrid={this.state.myStateGrid} sunkenShips={this.state.sunkenShips}/>
@@ -159,7 +159,7 @@ class Header extends React.Component {
                 <nav className="navbar navbar-default" >
                   <div className="container" >
                     <div className="navbar-header" >
-                      <a className="navbar-brand" >BattleShip< /a>
+                      <a className="navbar-brand" >BATTLESHIP< /a>
                     </div>
                     <div className="nav navbar-nav navbar-right">
                     </div>
@@ -403,19 +403,6 @@ class GameRoomButton extends React.Component {
     return button;
   }
 }
-
-//This will display informative messages to the player about the status of the game
-// class MessageBox extends React.Component {
-//     constructor(props) {
-//       super(props);
-//     }
-//
-//     //render the message
-//     render() {
-//       return ( <h2> {this.props.message} </h2>);
-//     }
-// }
-
 
 //this will show the state of grids used to play the game
 class Grid extends React.Component {

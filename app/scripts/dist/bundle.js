@@ -18911,9 +18911,9 @@ var GameWrapper = exports.GameWrapper = function (_React$Component) {
 
     _this.bgColors = {
       "Blue": "blueCell",
-      "Red": "redCell",
+      "Red": "redCell highlight",
       "Gray": "grayCell",
-      "White": 'whiteCell'
+      "White": "whiteCell highlight"
     };
 
     //initialize opponent grid to empty
@@ -19047,7 +19047,7 @@ var GameWrapper = exports.GameWrapper = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        null,
+        { className: 'gameWrapper' },
         _react2.default.createElement(Header, null),
         _react2.default.createElement(WelcomeDiv, { removeWelcomeCallback: this.removeWelcomeDiv, roomCounts: this.state.roomCounts, style: { display: this.state.displayWelcomeDiv } }),
         _react2.default.createElement(Body, { style: { display: this.state.displayBody }, messageBox: this.state.messageBox, opponentStateGrid: this.state.opponentStateGrid, myStateGrid: this.state.myStateGrid, sunkenShips: this.state.sunkenShips })
@@ -19098,7 +19098,7 @@ var Header = function (_React$Component2) {
               _react2.default.createElement(
                 'a',
                 { className: 'navbar-brand' },
-                'BattleShip'
+                'BATTLESHIP'
               )
             ),
             _react2.default.createElement('div', { className: 'nav navbar-nav navbar-right' })
@@ -19513,19 +19513,6 @@ var GameRoomButton = function (_React$Component6) {
   return GameRoomButton;
 }(_react2.default.Component);
 
-//This will display informative messages to the player about the status of the game
-// class MessageBox extends React.Component {
-//     constructor(props) {
-//       super(props);
-//     }
-//
-//     //render the message
-//     render() {
-//       return ( <h2> {this.props.message} </h2>);
-//     }
-// }
-
-
 //this will show the state of grids used to play the game
 
 
@@ -19697,7 +19684,7 @@ exports = module.exports = __webpack_require__(17)(false);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700);", ""]);
 
 // module
-exports.push([module.i, "body {\n  font-family: 'Roboto', sans-serif;\n  text-align: center;\n  font-size: 12px;\n  color: #575757;\n  background-color: #F5F5F5 !important;\n}\n\n.navbar {\n  background-color: #FFF;\n  border-bottom: 1px solid rgba(0,0,0,.1);\n  color: #333;\n  font-size: 16px;\n  font-weight: 400;\n  margin-bottom: 15px;\n}\n\n.card {\n  margin-bottom: 15px;\n}\n\n.card-header{\n  background-color: #FFF !important;\n  border-bottom: 0 !important;\n  color: #333;\n  font-weight: 300;\n  font-size: 22px;\n  line-height: 30px;\n  text-align: left;\n}\n\n.card-block {\n  padding: 10px;\n}\n\n.card-plain {\n  background-color: transparent!important;\n    -webkit-box-shadow: none!important;\n    box-shadow: none!important;\n    border: 0!important;\n}\n\n.card-plain .card-header{\n  background-color: transparent!important;\n  border: 0!important;\n  box-shadow: none!important;\n  -webkit-box-shadow: none!important;\n}\n\n.blueCell {\n  background-color: #1177C6;\n  border: 1px solid #FFF;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-size: 12px;\n  height: 50px;\n  width: 50px;\n}\n\n.redCell {\n  background-color: #AC162C;\n  border: 1px solid #FFF;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-size: 12px;\n  height: 50px;\n  width: 50px;\n}\n\n.whiteCell {\n  background-color: #FFFFFF;\n  border: 1px solid #FFF;\n  color: #575757;\n  cursor: pointer;\n  font-size: 12px;\n  height: 50px;\n  width: 50px;\n}\n\n.grayCell {\n  background-color: #9A9A9A;\n  border: 1px solid #FFF;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-size: 12px;\n  height: 50px;\n  width: 50px;\n}\n\n.col-xs-1-10, .col-sm-1-10 {\n  min-height: 36px;\n  position: relative;\n}\n\n.col-xs-1-10 {\n  float: left;\n  min-height: 36px;\n  width: 10%;\n}\n\n.col-xs-10-10, .col-sm-10-10 {\n  min-height: 36px;\n  position: relative;\n  width: 100%;\n}\n\n.col-xs-10-10 {\n  float: left;\n  min-height: 36px;\n  width: 100%;\n}\n\n.row {\n  margin: 0 !important;\n}\n\n.gameRoomButton {\n  background-color: #FFF;\n  border-radius: .25rem;\n  box-shadow: none;\n    color: #333;\n  cursor: pointer;\n  font-size: 22px;\n  height: 150px;\n  margin: 10px;\n  width: 100%;\n}\n\n.playerMessageSpan{\n    color: #333;\n  font-size: 14px;\n}\n\n.messageCard, .sunkenShipsCard{\n  color: #333;\n  font-size: 22px;\n  font-weight: 300;\n  padding-left: 10px;\n  padding-right: 10px;\n  width: 100%;\n\n}\n\n.messageCardText, .sunkenShipList{\ncolor: #333;\nfont-size: 14px;\n  font-weight: 400;\n}\n\n.sunkenShip {\n  color: #D9453D\n}\n\n.floatingShip {\n  color: #4688F1\n}\n\n.circle {\n  background: blue;\n  border-radius: 50%;\n  color: #FFF;\n  font-size: .5rem;\n  height: 36px;\n  line-height: 36px;\n  margin: 0 auto;\n  min-height: 36px;\n  -moz-border-radius: 50%;\n  -webkit-border-radius: 50%;\n  width: 36px;\n  opacity: 0.5;\n  filter: alpha(opacity=50);\n}\n\n.screen {\n  background-color: #082B0C;\n}\n\nbutton:focus {\n  outline: 0 !important;\n}\n\nbutton:disabled {\n  cursor: default;\n}\n\n@media (min-width: 768px) {\n  .col-sm-1-10 {\n    float: left;\n    min-height: 36px;\n    width: 10%;\n  }\n  .col-sm-10-10 {\n    float: left;\n    min-height: 36px;\n    width: 100%;\n  }\n}\n\n@media (min-width: 992px) {\n  .col-md-1-10 {\n    float: left;\n    min-height: 36px;\n    width: 10%;\n  }\n  .col-md-10-10 {\n    float: left;\n    min-height: 36px;\n    width: 100%;\n  }\n}\n\n@media (min-width: 1200px) {\n  .col-lg-1-10 {\n    float: left;\n    min-height: 36px;\n    width: 10%;\n  }\n  .col-lg-2-10 {\n    float: left;\n    min-height: 36px;\n    width: 20%;\n  }\n}\n", ""]);
+exports.push([module.i, ".gameWrapper {\n  font-family: 'Roboto', sans-serif;\n  text-align: center;\n  font-size: 12px;\n  color: #575757;\n  background-color: #F5F5F5;\n}\n\n.navbar {\n  background-color: #0E3A5E;\n  border-bottom: 1px solid rgba(0, 0, 0, .1);\n  color: #FFF;\n  font-size: 16px;\n  font-weight: 400;\n  margin-bottom: 15px;\n}\n\n.card {\n  margin-bottom: 15px;\n  border-radius: 3px;\n}\n\n.card-header {\n  background-color: #FFF !important;\n  border-bottom: 0 !important;\n  color: #333;\n  font-weight: 300;\n  font-size: 22px;\n  line-height: 30px;\n  text-align: left;\n}\n\n.card-block {\n  padding: 10px;\n}\n\n/* These are all marked important to overide BootStrap */\n\n.card-plain {\n  background-color: transparent !important;\n  -webkit-box-shadow: none !important;\n  box-shadow: none !important;\n  border: 0 !important;\n}\n\n/* These are all marked important to overide BootStrap */\n\n.card-plain .card-header {\n  background-color: transparent !important;\n  border: 0 !important;\n  box-shadow: none !important;\n  -webkit-box-shadow: none !important;\n}\n\n.blueCell {\n  background-color: #41BDF3;\n  border: 1px solid #FFF;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-size: 12px;\n  height: 50px;\n  width: 50px;\n}\n\n.redCell {\n  background-color: #E2151B;\n  border: 1px solid #FFF;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-size: 12px;\n  height: 50px;\n  width: 50px;\n}\n\n.whiteCell {\n  background-color: #FFFFFF;\n  border: 1px solid #FFF;\n  color: #575757;\n  cursor: pointer;\n  font-size: 12px;\n  height: 50px;\n  width: 50px;\n}\n\n.grayCell {\n  background-color: #959595;\n  border: 1px solid #FFF;\n  color: #FFFFFF;\n  cursor: pointer;\n  font-size: 12px;\n  height: 50px;\n  width: 50px;\n}\n\n.col-xs-1-10, .col-sm-1-10 {\n  min-height: 36px;\n  position: relative;\n}\n\n.col-xs-1-10 {\n  float: left;\n  min-height: 36px;\n  width: 10%;\n}\n\n.col-xs-10-10, .col-sm-10-10 {\n  min-height: 36px;\n  position: relative;\n  width: 100%;\n}\n\n.col-xs-10-10 {\n  float: left;\n  min-height: 36px;\n  width: 100%;\n}\n\n.row {\n  margin: 0 !important;\n}\n\n.gameRoomButton {\n  background-color: #FFF;\n  border-radius: .25rem;\n  box-shadow: none;\n  color: #333;\n  cursor: pointer;\n  font-size: 22px;\n  height: 150px;\n  margin: 10px;\n  width: 100%;\n  border-radius: 3px;\n}\n\n.playerMessageSpan {\n  color: #333;\n  font-size: 14px;\n}\n\n.messageCard, .sunkenShipsCard {\n  color: #333;\n  font-size: 22px;\n  font-weight: 300;\n  padding-left: 10px;\n  padding-right: 10px;\n  width: 100%;\n}\n\n.messageCardText, .sunkenShipList {\n  color: #333;\n  font-size: 14px;\n  font-weight: 400;\n}\n\n.sunkenShip {\n  color: #E2151B\n}\n\n.floatingShip {\n  color: #41BDF3\n}\n\n.screen {\n  background-color: #082B0C;\n}\n\nbutton:hover {\n  opacity: 0.8;\n}\n\nbutton:focus {\n  outline: 0 !important;\n}\n\nbutton:disabled {\n  cursor: default;\n}\n\nbutton:disabled:hover {\n  cursor: default;\n  opacity: 1;\n}\n\n@-webkit-keyframes blue-highlight {\n  0% {\n    background: #0E3A5E;\n  }\n  100% {\n    background: none;\n  }\n}\n\n@keyframes blue-highlight {\n  0% {\n    background: #0E3A5E;\n  }\n  100% {\n    background: none;\n  }\n}\n\n.highlight {\n  -webkit-animation: blue-highlight 1s ease-in 1;\n  animation: blue-highlight 1s ease-in 1;\n}\n\n@media (min-width: 768px) {\n  .col-sm-1-10 {\n    float: left;\n    min-height: 36px;\n    width: 10%;\n  }\n  .col-sm-10-10 {\n    float: left;\n    min-height: 36px;\n    width: 100%;\n  }\n}\n\n@media (min-width: 992px) {\n  .col-md-1-10 {\n    float: left;\n    min-height: 36px;\n    width: 10%;\n  }\n  .col-md-10-10 {\n    float: left;\n    min-height: 36px;\n    width: 100%;\n  }\n}\n\n@media (min-width: 1200px) {\n  .col-lg-1-10 {\n    float: left;\n    min-height: 36px;\n    width: 10%;\n  }\n  .col-lg-2-10 {\n    float: left;\n    min-height: 36px;\n    width: 20%;\n  }\n}\n", ""]);
 
 // exports
 
@@ -19978,7 +19965,7 @@ var Game = function () {
             console.log("opponent has joined");
 
             //alert the waiting player that an opponent has arrived
-            _main2.default.react.updateMessageBox("Opponent Has Joined!  Click a square on their board to attack.");
+            _main2.default.react.updateMessageBox("Opponent has joined!  Click a square on their board to attack.");
 
             //update the message handler
             this.setMessageHandler(data);
@@ -20143,7 +20130,7 @@ var Player = function () {
             _wsClient2.default.sendMessage(response.serialize());
             console.log('Responded to Attack.  (Already Attacked)');
             this.isTurn = true;
-            _main2.default.react.updateMessageBox("Your Turn.");
+            _main2.default.react.updateMessageBox("Your Turn.  Choose a square on your opponent's board to attack!");
             break; //break early
           }
 
@@ -20190,7 +20177,7 @@ var Player = function () {
             //FUTURE: Return to game lobby
           } else {
             this.isTurn = true;
-            _main2.default.react.updateMessageBox("Your Turn.");
+            _main2.default.react.updateMessageBox("Your Turn.  Choose a square on your opponent's board to attack!");
           }
 
           break; //End of Attack handler
@@ -20254,6 +20241,9 @@ var Fleet = function () {
     this.ships.push(new Ship('Submarine', 3));
     this.ships.push(new Ship('Destroyer', 2));
   }
+
+  //returns all sunken ships in a players fleet
+
 
   _createClass(Fleet, [{
     key: 'getAllSunk',
@@ -20352,9 +20342,9 @@ var StateGrid = function () {
 
     this.bgColors = {
       "Blue": "blueCell",
-      "Red": "redCell",
+      "Red": "redCell highlight",
       "Gray": "grayCell",
-      "White": 'whiteCell'
+      "White": "whiteCell highlight"
     };
 
     this.row = Array(10).fill(this.bgColors.Blue);
@@ -20395,6 +20385,8 @@ var StateGrid = function () {
 }();
 
 var GameMessage = exports.GameMessage = function () {
+
+  //class defines all serialized messages transmitted between players
   function GameMessage(_ref) {
     var g = _ref.gameRoomID,
         _ref$timestamp = _ref.timestamp,
@@ -20456,287 +20448,6 @@ var GameMessage = exports.GameMessage = function () {
 }();
 
 exports.default = Game;
-
-// export class Grid extends React.Component {
-//
-//   constructor(props){
-//     super(props);
-//
-//     this.name = (new Date()).getTime();
-//
-//     this.bgColors = {"Blue": "#0000FF",
-//                     "Red": "#FF0000",
-//                     "Gray": "#808080",
-//                     "White": '#FFFFFF'
-//     };
-//
-//     this.stateRow = Array(10).fill(this.bgColors.Blue);
-//     for(let i = 0; i < 10; i++){
-//       this.stateGrid = Array(10).fill(this.stateRow);
-//     }
-//
-//     this.state = {
-//       cells: this.stateGrid
-//     };
-//     this.handleVDOMUpdates = this.handleVDOMUpdates.bind(this);
-//   }
-//
-//   handleVDOMUpdates(data) {
-//
-//     console.log("Handling VDOM Updates for " + this.name);
-//     console.log("Changing Color of " + data.location.xCoordinate + "-" + data.location.xCoordinate + " to Gray.");
-//
-//     if (data.location.status == "hit") {
-//       const cells = this.state.cells.map((arr) => {return arr.slice()});
-//       cells[data.location.xCoordinate][data.location.yCoordinate] = this.bgColors.Red;
-//       this.setState({cells: cells});
-//     }
-//
-//     else if (data.location.status == "miss") {
-//       const cells = this.state.cells.map((arr) => {return arr.slice()});
-//       cells[data.location.xCoordinate][data.location.yCoordinate] = this.bgColors.White;
-//       this.setState({cells: cells});
-//     }
-//
-//     else if (data.location.status == "occupied"){
-//       const cells = this.state.cells.map((arr) => {return arr.slice()});
-//       cells[data.location.xCoordinate][data.location.yCoordinate] = this.bgColors.Gray;
-//       this.setState({cells: cells});
-//     }
-//
-//
-//
-//   }
-//
-//   renderCell(x,y) {
-//     let columnID = `${x}-${y}`;
-//     let xCoor = `${x}`;
-//     let yCoor = `${y}`;
-//     return(<Cell ref={columnID} key={columnID} columnID={columnID} xCoor={xCoor} yCoor={yCoor} color={this.state.cells[x][y]} disabled={this.props.disabled}/>)
-//   }
-//
-//   componentWillMount(){
-//     console.log("Component To Mount: " + this.name);
-//     if(this.props.gridIdentity == "Opponent"){
-//       opponentGridID = this;
-//       //myGlobalGrid.identifyOpponentsGrid = () => {return this};
-//     }
-//     else{
-//       myGridID = this;
-//       //myGlobalGrid.identifyMyGrid = () => {return this};
-//     }
-//   }
-//
-//   render() {
-//       let rows = [];
-//       for (var y = 0; y < 10; y++){
-//       let rowID = `row${y}`;
-//       let column = [];
-//       for (var x = 0; x < 10; x++){
-//       let columnID = `${x}-${y}`;
-//       let xCoor = `${x}`;
-//       let yCoor = `${y}`;
-//
-//       column.push(this.renderCell(x,y)); // Edit this to push data into cell
-//       }
-//       rows.push(<div className="row" key={y} id={rowID}>{column} </div>);
-//       }
-//       return (<div width="100%" height="100%">{rows}</div>);
-//   }
-// }
-
-//
-//
-
-//
-// export class Cell extends React.Component {
-//   constructor(props){
-//     super(props);
-// 	}
-//
-//   componentDidMount(){
-//     console.log("Cell Mounted");
-//   }
-//
-//
-//   render(){
-//
-//     let cell;
-//     if(this.props.disabled == "disabled"){
-//       cell = <div className="col-xs-1-10 col-sm-1-10 col-md-1-10 col-lg-1-10"  key={this.props.columnID} id={this.props.columnID}><button style={{backgroundColor: this.props.color}}  data-xcoor={this.props.xCoor} data-ycoor={this.props.yCoor} disabled>{this.props.columnID} </button></div>
-//     }
-//     else {
-//       cell = <div className="col-xs-1-10 col-sm-1-10 col-md-1-10 col-lg-1-10"  key={this.props.columnID} id={this.props.columnID}><button style={{backgroundColor: this.props.color}}  data-xcoor={this.props.xCoor} data-ycoor={this.props.yCoor} >{this.props.columnID} </button></div>
-//     }
-//
-//     return (
-//       cell
-//     )
-//   }
-// }
-
-
-// export class WelcomeDiv extends React.Component {
-//   constructor(props){
-//     super(props);
-//     this.gameRoomButtons = [];
-//     this.gameRoomCount = 5;
-// 	}
-//
-//   renderGameRoomButton(GameRoomID) {
-//     return(<GameRoomButton gameroomid={GameRoomID} removeWelcomeCallback={this.props.removeWelcomeCallback} key={GameRoomID}/>)
-//   }
-//
-//   render(){
-//     let buttons = [];
-//
-//     for(let i = 0; i < this.gameRoomCount; i++){
-//       buttons.push(this.renderGameRoomButton(i+1));
-//     }
-//
-//     return (
-//           <div className="container" style={this.props.style}>
-//               <h5 >Please Select a GameRoom</h5>
-//             <div>
-//               {buttons}
-//             </div>
-//           </div>
-//     )
-//   }
-// }
-
-// export class GameRoomButton extends React.Component {
-//   constructor(props){
-//     super(props);
-// 	}
-//
-//   createGame(){
-//     alert("Game " + this.props.gameroomid + " started");
-//     let myCallback = this.props.removeWelcomeCallback;
-//     myCallback();
-//     let g = new Game();
-//     g.GameRoomID = this.props.gameroomid;
-//     g.startGame();
-//
-//   }
-//
-//
-//   render(){
-//     return (
-//       <button gameroomid={this.props.GamerRoomID} onClick={() => {this.createGame()}}>GameRoom {this.props.gameroomid}</button>
-//     )
-//   }
-// }
-
-// arrangeFleet() {
-//   //for every ship in the player's fleet
-//   this.fleet.getShips().forEach(function(ship) {
-//     this.placeShip(ship);
-//   });
-// }
-//
-//
-// placeShip(ship) {
-//
-//   //randomly determine a starting location for the x and y coordinates
-//   let randomFactor = (10 - ship.size) + 1;  //disallows the ship to run off board
-//   let xstart = Math.floor(Math.random() * randomFactor);
-//   let ystart = Math.floor(Math.random() * randomFactor);
-//
-//   //flip a coin to determine the orientation of the ship
-//   let orientationCoordinate;
-//   let coinToss = Math.floor((Math.random() * 100) + 1);
-//   if ((cointoss % 2) == 0) { //if even, place ship horizontally
-//     orientationCoordinate = xstart;
-//   } else { //if odd, place ship vertically
-//     orientationCoordinate = ystart;
-//   }
-//
-//   let i = 0;
-//   while(i < ship.size){
-//     //create a new location
-//     let aLocation = new Location();
-//
-//     //define both starting locations; only one will be updated
-//     aLocation.xCoordinate = xstart;
-//     aLocation.yCoordinate = ystart;
-//
-//     //use stateGrid check to see if the location is not already occupied
-//     if (this.myStateGrid.grid[xCoordinate][yCoordinate] != this.myStateGrid.bgColors.gray) {
-//
-//       //push the ship onto the occupied location stackand update player stateGrid
-//       ship.occupiedLocations.push(aLocation);
-//       aLocation.status = 'occupied';
-//       this.myStateGrid.updateStateGrid(aLocation);
-//       view.react.updateMyStateGrid(this.myStateGrid.grid);
-//
-//       if ((cointoss % 2) == 0) {
-//         xstart++;
-//       } else {
-//         ystart++;
-//       }
-//       i++;
-//     }
-//     else{
-//
-//       //if the location is already occupied by another ship...
-//       //clear this ship's locations
-//       //make a recursive call to this method to re-place the ship
-//       //exit the while loop
-//       ship.occupiedLocations = [];
-//       this.placeShip(ship);
-//       i = ship.size;
-//
-//     }
-//   }
-//
-// }
-//
-//
-// arrangeFleet() {
-//   this.fleet.getShips().forEach(function(ship) {
-//     console.log(ship);
-//     let randomFactor = (10 - ship.size) + 1;
-//     let cointoss = Math.floor((Math.random() * 100) + 1);
-//     let xstart = Math.floor(Math.random() * randomFactor);
-//     let ystart = Math.floor(Math.random() * randomFactor);
-//     let targetCoordinate;
-//     if ((cointoss % 2) == 0) { //arrange horizontally
-//       targetCoordinate = xstart;
-//     } else {
-//       targetCoordinate = ystart;
-//     }
-//     while (targetCoordinate > randomFactor) { //ship will run off board
-//       targetCoordinate = Math.floor(Math.random() * randomFactor); //generate new starting position
-//     }
-//
-//     var i = 0;
-//     while (i < ship.size) {
-//       let aLocation = new Location();
-//       aLocation.xCoordinate = xstart;
-//       aLocation.yCoordinate = ystart;
-//       if (this.myStateGrid.grid[xCoordinate][yCoordinate] != this.myStateGrid.bgColors.gray) {
-//         ship.occupiedLocations.push(aLocation);
-//         aLocation.status = 'occupied';
-//         this.myStateGrid.updateStateGrid(aLocation);
-//         view.react.updateMyStateGrid(this.myStateGrid.grid); //Pass updated stategrid
-//         if ((cointoss % 2) == 0) { //arrange horizontally
-//           xstart++;
-//         } else {
-//           ystart++;
-//         }
-//         i++;
-//       } else {
-//         targetCoordinate = Math.floor(Math.random() * randomFactor); //generate new starting position
-//         while (targetCoordinate > randomFactor) { //ship will run off board
-//           targetCoordinate = Math.floor(Math.random() * randomFactor); //generate new starting position
-//         }
-//         ship.occupiedLocations = [];
-//       }
-//     }
-//     //console.log(ship.occupiedLocations);
-//   }.bind(this));
-// }
 
 /***/ }),
 /* 37 */

@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
-
-body {
+.gameWrapper {
   font-family: 'Roboto', sans-serif;
   text-align: center;
   font-size: 12px;
   color: #575757;
-  background-color: #F5F5F5 !important;
+  background-color: #F5F5F5;
 }
 
 .navbar {
-  background-color: #FFF;
-  border-bottom: 1px solid rgba(0,0,0,.1);
-  color: #333;
+  background-color: #0E3A5E;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  color: #FFF;
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 15px;
@@ -19,9 +18,10 @@ body {
 
 .card {
   margin-bottom: 15px;
+  border-radius: 3px;
 }
 
-.card-header{
+.card-header {
   background-color: #FFF !important;
   border-bottom: 0 !important;
   color: #333;
@@ -35,22 +35,26 @@ body {
   padding: 10px;
 }
 
+/* These are all marked important to overide BootStrap */
+
 .card-plain {
-  background-color: transparent!important;
-    -webkit-box-shadow: none!important;
-    box-shadow: none!important;
-    border: 0!important;
+  background-color: transparent !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
 }
 
-.card-plain .card-header{
-  background-color: transparent!important;
-  border: 0!important;
-  box-shadow: none!important;
-  -webkit-box-shadow: none!important;
+/* These are all marked important to overide BootStrap */
+
+.card-plain .card-header {
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
 }
 
 .blueCell {
-  background-color: #1177C6;
+  background-color: #41BDF3;
   border: 1px solid #FFF;
   color: #FFFFFF;
   cursor: pointer;
@@ -60,7 +64,7 @@ body {
 }
 
 .redCell {
-  background-color: #AC162C;
+  background-color: #E2151B;
   border: 1px solid #FFF;
   color: #FFFFFF;
   cursor: pointer;
@@ -80,7 +84,7 @@ body {
 }
 
 .grayCell {
-  background-color: #9A9A9A;
+  background-color: #959595;
   border: 1px solid #FFF;
   color: #FFFFFF;
   cursor: pointer;
@@ -120,61 +124,49 @@ body {
   background-color: #FFF;
   border-radius: .25rem;
   box-shadow: none;
-    color: #333;
+  color: #333;
   cursor: pointer;
   font-size: 22px;
   height: 150px;
   margin: 10px;
   width: 100%;
+  border-radius: 3px;
 }
 
-.playerMessageSpan{
-    color: #333;
+.playerMessageSpan {
+  color: #333;
   font-size: 14px;
 }
 
-.messageCard, .sunkenShipsCard{
+.messageCard, .sunkenShipsCard {
   color: #333;
   font-size: 22px;
   font-weight: 300;
   padding-left: 10px;
   padding-right: 10px;
   width: 100%;
-
 }
 
-.messageCardText, .sunkenShipList{
-color: #333;
-font-size: 14px;
+.messageCardText, .sunkenShipList {
+  color: #333;
+  font-size: 14px;
   font-weight: 400;
 }
 
 .sunkenShip {
-  color: #D9453D
+  color: #E2151B
 }
 
 .floatingShip {
-  color: #4688F1
-}
-
-.circle {
-  background: blue;
-  border-radius: 50%;
-  color: #FFF;
-  font-size: .5rem;
-  height: 36px;
-  line-height: 36px;
-  margin: 0 auto;
-  min-height: 36px;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  width: 36px;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+  color: #41BDF3
 }
 
 .screen {
   background-color: #082B0C;
+}
+
+button:hover {
+  opacity: 0.8;
 }
 
 button:focus {
@@ -183,6 +175,34 @@ button:focus {
 
 button:disabled {
   cursor: default;
+}
+
+button:disabled:hover {
+  cursor: default;
+  opacity: 1;
+}
+
+@-webkit-keyframes blue-highlight {
+  0% {
+    background: #0E3A5E;
+  }
+  100% {
+    background: none;
+  }
+}
+
+@keyframes blue-highlight {
+  0% {
+    background: #0E3A5E;
+  }
+  100% {
+    background: none;
+  }
+}
+
+.highlight {
+  -webkit-animation: blue-highlight 1s ease-in 1;
+  animation: blue-highlight 1s ease-in 1;
 }
 
 @media (min-width: 768px) {

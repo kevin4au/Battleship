@@ -87,7 +87,7 @@ class Game {
           console.log("opponent has joined");
 
           //alert the waiting player that an opponent has arrived
-          view.react.updateMessageBox("Opponent Has Joined!  Click a square on their board to attack.");
+          view.react.updateMessageBox("Opponent has joined!  Click a square on their board to attack.");
 
           //update the message handler
           this.setMessageHandler(data);
@@ -223,21 +223,21 @@ class Player {
 
 
         //If location already attacked
-        if(this.myStateGrid.grid[data.location.xCoordinate][data.location.yCoordinate] != "grayCell" &&
-          this.myStateGrid.grid[data.location.xCoordinate][data.location.yCoordinate] != "blueCell"){
-            //Draft up a response messsage to alert opponent of the outcome of their attack
-            var response = new GameMessage({
-              gameRoomID: this.gameRoomID,
-              sender: this.playerName,
-              messageType: 'Already Attacked',
-            });
+        if (this.myStateGrid.grid[data.location.xCoordinate][data.location.yCoordinate] != "grayCell" &&
+          this.myStateGrid.grid[data.location.xCoordinate][data.location.yCoordinate] != "blueCell") {
+          //Draft up a response messsage to alert opponent of the outcome of their attack
+          var response = new GameMessage({
+            gameRoomID: this.gameRoomID,
+            sender: this.playerName,
+            messageType: 'Already Attacked',
+          });
 
-            //Send the message
-            socket.sendMessage(response.serialize());
-            console.log('Responded to Attack.  (Already Attacked)');
-            this.isTurn = true;
-            view.react.updateMessageBox("Your Turn.");
-            break; //break early
+          //Send the message
+          socket.sendMessage(response.serialize());
+          console.log('Responded to Attack.  (Already Attacked)');
+          this.isTurn = true;
+          view.react.updateMessageBox("Your Turn.  Choose a square on your opponent's board to attack!");
+          break; //break early
         }
 
         //See if the passed location matched a location occupied by a ship
@@ -283,7 +283,7 @@ class Player {
           //FUTURE: Return to game lobby
         } else {
           this.isTurn = true;
-          view.react.updateMessageBox("Your Turn.");
+          view.react.updateMessageBox("Your Turn.  Choose a square on your opponent's board to attack!");
         }
 
         break; //End of Attack handler
@@ -345,6 +345,7 @@ class Fleet {
     this.ships.push(new Ship('Destroyer', 2));
   }
 
+  //returns all sunken ships in a players fleet
   getAllSunk() {
     let sunkenShips = [];
     for (let shipIndex = 0; shipIndex < this.ships.length; shipIndex++) {
@@ -415,9 +416,9 @@ class StateGrid {
   constructor() {
     this.bgColors = {
       "Blue": "blueCell",
-      "Red": "redCell",
+      "Red": "redCell highlight",
       "Gray": "grayCell",
-      "White": 'whiteCell'
+      "White": "whiteCell highlight"
     };
 
     this.row = Array(10).fill(this.bgColors.Blue);
@@ -454,7 +455,10 @@ class StateGrid {
 
 }
 
+
 export class GameMessage {
+
+  //class defines all serialized messages transmitted between players
   constructor({ //includes all possible JSON objects to transmit
     gameRoomID: g,
     timestamp: t = (new Date()).getTime(), //defaults to current time stamp
