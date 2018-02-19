@@ -40,4 +40,4 @@ the code is edited in the src folder.  By running "npm run watch", webpack will 
 * Add a sign in screen to make players unique.  Gravatars could be used.  A chat window could also be created to make for a better player to player interface.
 * Refactor the receiveMessage() method in the *Player* class.  This one grew a lot, and I think it could be broken into separate methods for better readabilty.
 * Make additional UI enhancements.
-* Note: Possible defect exists in index.js.  The error handling function would be a good candidate for a set of unit tests.
+* Note: Possible defect exists in index.js.  The error handling function would be a good candidate for a set of unit tests using clientID and myClients[] as inputs.  The output should log a stack trace or a success message to the console as the function produces no output.
