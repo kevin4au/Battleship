@@ -1,3 +1,15 @@
+/*
+ * Shipt Interview | Battleship Game
+ *
+ * view.js
+ *
+ * created: 4 February 2018
+ * author: Kevin Boyd
+ *
+ * This file contains the client logic for rendering the view.
+ *
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 

@@ -124,6 +124,7 @@ wss.on('connection', ws => {
   ws.on('error', function(e) {
     try {
 
+      //Keep an eye on this function.  Its possible that it may unnecessarily evict clients.  Probably a good candidate for unit testing.
       console.log(e);
 
       if (myClients.length > 0) {

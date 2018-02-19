@@ -140,13 +140,7 @@ class Player {
     let ystart = Math.floor(Math.random() * randomFactor);
 
     //flip a coin to determine the orientation of the ship
-    let orientationCoordinate;
     let coinToss = Math.floor((Math.random() * 100) + 1);
-    if ((coinToss % 2) == 0) { //if even, place ship horizontally
-      orientationCoordinate = xstart;
-    } else { //if odd, place ship vertically
-      orientationCoordinate = ystart;
-    }
 
     let i = 0;
     while (i < ship.size) {
