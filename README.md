@@ -18,7 +18,7 @@ Logs may be seen by opening up dev tools in the browser.  (Most testing has take
 This program was build using Node.js and React.  It is comprised of a number of files that make up both the client and server.
 
 ### Server:
-Most of the server logic takes place in index.js in the root directory.  extract.js will assist this file in routing.
+Most of the server logic takes place in index.js in the root directory.
 This file handles both the serving of files and the handling of websockets.  
 A second file exists to resolve the paths used by the site.  We will only use one: index.html.  
 When editing files, it is useful to run "npm run dev" in a terminal window to automatically restart the server when files are saved.
@@ -38,5 +38,5 @@ the code is edited in the src folder.  By running "npm run watch", webpack will 
   This would require the view to be reset and for a notification message to be sent to other clients.
 * Make the number of game rooms dynamic.  For simplicity, they have been limited to 5.
 * Add a sign in screen to make players unique.  Gravatars could be used.  A chat window could also be created to make for a better player to player interface.
-* Refactor the receiveMessage() method in the *Player* class.  This one grew a lot, and I think it could be broken into separate methods for better readabilty.  This would also be a good opportunity to create a new file and start adding unit tests, as any change in this method could result in program errors.
-* Make additional UI enhancements to make the application more user friendly and exciting.  Add a meta-tag in the HTML header to allow for viewport scaling on high-res mobile devices and update media queries accordingly.
+* Refactor the receiveMessage() method in the *Player* class.  This one grew a lot, and I think it could be broken into separate methods for better readabilty.
+* Make additional UI enhancements.
