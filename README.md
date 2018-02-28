@@ -15,7 +15,7 @@ Open up a new browser window or tab to play a game of Battleship local to your m
 Logs may be seen by opening up dev tools in the browser.  (Most testing has taken place in Google Chrome.)
   
 ## About This Program:
-This program was build using Node.js and React.  It is comprised of a number of files that make up both the client and server.
+This program was built using Node.js and React.  It is comprised of a number of files that make up both the client and server.
 
 ### Server:
 Most of the server logic takes place in index.js in the root directory.
